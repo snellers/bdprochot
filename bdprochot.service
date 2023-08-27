@@ -1,0 +1,8 @@
+[Unit]
+Description=bdprochot
+
+[Service]
+ExecStart=/etc/bdprochot.sh
+
+[Install]
+WantedBy=multi-user.target

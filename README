@@ -2,13 +2,13 @@
 
 This pokes a machine specific register to disable the BD PROCHOT. Only suitable if your CPU is being forced to underclock due to a dodgy temperature reading. Using it otherwise may cause a CPU to overheat.
 
-To make this run on system startup add this to /etc/systemd/system/bdprochot.service
+To make this run on system startup add this to /etc/systemd/system/bdprochot.service and put bdprochot.sh in /etc
 
 [Unit]
 Description=bdprochot
 
 [Service]
-ExecStart=/home/your_user/bdprochot.sh
+ExecStart=/etc/bdprochot.sh
 
 [Install]
 WantedBy=multi-user.target
